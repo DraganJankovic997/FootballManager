@@ -55,9 +55,9 @@ public class TimRestController {
 	public ResponseEntity<Tim> deleteTim(@PathVariable ("id") Integer id){
 		if(!tr.existsById(id)) return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		tr.deleteById(id);
-		if(id==11)
+		if(id==10)
 			jdbc.execute("insert into tim(id, naziv, osnovan, sediste, liga)\r\n" + 
-					"values(11, 'Delete Test', \r\n" + 
+					"values(10, 'Delete Test', \r\n" + 
 					"to_date('20.01.1975.', 'dd.mm.yyyy.'), 'FTN', 1);");
 		return new ResponseEntity<>(HttpStatus.OK);
 	}

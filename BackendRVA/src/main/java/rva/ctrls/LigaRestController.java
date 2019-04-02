@@ -47,7 +47,7 @@ public class LigaRestController {
 		if(!lr.existsById(id)) return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		lr.deleteById(id);
 		if(id==4)
-			jdbc.execute("insert into liga(id, naziv, oznaka)\r\n" + 
+			jdbc.execute("insert into liga(id, naziv, oznaka)" + 
 					"values(4, 'Test Delete', 'TLS');");
 		return new ResponseEntity<>(HttpStatus.OK);
 	}

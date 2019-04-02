@@ -45,8 +45,8 @@ public class NacionalnostRestController {
 	public ResponseEntity<Nacionalnost> deleteNacionalnost(@PathVariable ("id") Integer id){
 		if(!nr.existsById(id)) return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		nr.deleteById(id);
-		if(id == 7)
-			jdbc.execute("insert into nacionalnost(id, naziv, skracenica) values(7, \'Crnogorsko\', \'CG\');");
+		if(id == 6)
+			jdbc.execute("insert into nacionalnost(id, naziv, skracenica) values(6, \'Del Test\', \'DT\');");
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	

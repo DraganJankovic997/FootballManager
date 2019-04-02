@@ -59,9 +59,9 @@ public class IgracRestController {
 	public ResponseEntity<Igrac> deleteIgrac(@PathVariable ("id") Integer id){
 		if(!ir.existsById(id)) return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		ir.deleteById(id);
-		if(id == 21)
+		if(id == 15)
 			jdbc.execute("insert into igrac(id, ime, prezime, broj_reg, datum_rodjenja, nacionalnost, tim)\r\n" + 
-					"values(21, 'Test', 'Delete', '3321', \r\n" + 
+					"values(15, 'Test', 'Delete', '3321', \r\n" + 
 					"to_date('20.12.1977.', 'dd.mm.yyyy.'), 1, 1);");
 		return new ResponseEntity<>(HttpStatus.OK);
 	}

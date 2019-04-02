@@ -8,6 +8,8 @@ insert into nacionalnost(id, naziv, skracenica)
 values(nextval('nacionalnost_seq'), 'Bosansko', 'BH');
 insert into nacionalnost(id, naziv, skracenica)
 values(nextval('nacionalnost_seq'), 'Madjarsko', 'HUN');
+insert into nacionalnost(id, naziv, skracenica)
+values(nextval('nacionalnost_seq'), 'Britansko', 'UK');
 
 insert into liga(id, naziv, oznaka)
 values(nextval('liga_seq'), 'Superliga Srbije', 'SLS');
@@ -15,6 +17,8 @@ insert into liga(id, naziv, oznaka)
 values(nextval('liga_seq'), 'Prva liga Srbije', 'PLS');
 insert into liga(id, naziv, oznaka)
 values(nextval('liga_seq'), 'Druga liga Srbije', 'DLS');
+insert into liga(id, naziv, oznaka)
+values(nextval('liga_seq'), 'Test liga Srbije', 'TLS');
 
 insert into tim(id, naziv, osnovan, sediste, liga)
 values(nextval('tim_seq'), 'Partizan', 
@@ -40,6 +44,13 @@ to_date('13.12.1967.', 'dd.mm.yyyy.'), 'Zemun', 2);
 insert into tim(id, naziv, osnovan, sediste, liga)
 values(nextval('tim_seq'), 'Dinamo', 
 to_date('20.01.1975.', 'dd.mm.yyyy.'), 'Vranje', 1);
+insert into tim(id, naziv, osnovan, sediste, liga)
+values(nextval('tim_seq'), 'Barselona', 
+to_date('04.10.1945.', 'dd.mm.yyyy.'), 'Barselona', 1);
+insert into tim(id, naziv, osnovan, sediste, liga)
+values(nextval('tim_seq'), 'Liverpul', 
+to_date('04.10.1945.', 'dd.mm.yyyy.'), 'Liverpul', 1);
+
 
 insert into igrac(id, ime, prezime, broj_reg, datum_rodjenja, nacionalnost, tim)
 values(nextval('igrac_seq'), 'Dragan', 'Mance', '312314123', 
