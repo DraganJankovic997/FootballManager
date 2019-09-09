@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'frontedRVA'`, () => {
+  it(`should have as title 'frontendRVA'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('frontedRVA');
+    expect(app.title).toEqual('frontendRVA');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to frontedRVA!');
+    expect(compiled.querySelector('.content span').textContent).toContain('frontendRVA app is running!');
   });
 });

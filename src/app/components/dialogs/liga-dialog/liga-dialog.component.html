@@ -1,0 +1,28 @@
+<div class="container">
+  <h3 mat-dialog-title *ngIf="flag==1">Dodavanje lige</h3>
+  <h3 mat-dialog-title *ngIf="flag==2">Modifikacija lige: {{data.naziv}}</h3>
+  <h3 mat-dialog-title *ngIf="flag==3">Brisanje lige: {{data.naziv}}</h3>
+  <form #formControl="ngForm" class="mat-dialog-content">
+    <div class="form">
+      <mat-form-field>
+        <input matInput placeholder="Naziv" [(ngModel)]="data.naziv" name="naziv" 
+        [disabled] = "flag==3" required>
+      </mat-form-field>
+    </div>
+    <div class="form">
+      <mat-form-field>
+        <input matInput placeholder="Oznaka" [(ngModel)]="data.oznaka" name="oznaka" 
+        [disabled] = "flag==3" required>
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+      <button mat-button *ngIf="flag==1" (click)="add()" [type]="submit" [mat-dialog-close]="1"
+        [disabled]="!formControl.valid">Sačuvaj</button>
+      <button mat-button *ngIf="flag==2" (click)="update()" [type]="submit" [mat-dialog-close]="1"
+        [disabled]="!formControl.valid">Sačuvaj</button>
+      <button mat-button *ngIf="flag==3" (click)="delete()" [type]="submit" [mat-dialog-close]="1"
+      >Obriši</button>
+    </div>
+  </form>
+</div>
