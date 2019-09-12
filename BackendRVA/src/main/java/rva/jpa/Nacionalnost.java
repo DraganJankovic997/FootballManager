@@ -27,7 +27,7 @@ public class Nacionalnost implements Serializable {
 	private String skracenica;
 
 	//bi-directional many-to-one association to Igrac
-	@OneToMany(mappedBy="nacionalnost")
+	@OneToMany(mappedBy="nacionalnost", cascade = CascadeType.REMOVE, orphanRemoval=true)
 	@JsonIgnore
 	private List<Igrac> igracs;
 

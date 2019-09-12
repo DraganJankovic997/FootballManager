@@ -31,7 +31,7 @@ public class Tim implements Serializable {
 	private String sediste;
 
 	//bi-directional many-to-one association to Igrac
-	@OneToMany(mappedBy="tim")
+	@OneToMany(mappedBy="tim", cascade = CascadeType.REMOVE, orphanRemoval=true)
 	@JsonIgnore
 	private List<Igrac> igracs;
 

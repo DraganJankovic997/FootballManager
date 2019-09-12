@@ -27,7 +27,7 @@ public class Liga implements Serializable {
 	private String oznaka;
 
 	//bi-directional many-to-one association to Tim
-	@OneToMany(mappedBy="liga")
+	@OneToMany(mappedBy="liga", cascade = CascadeType.REMOVE, orphanRemoval=true)
 	@JsonIgnore
 	private List<Tim> tims;
 

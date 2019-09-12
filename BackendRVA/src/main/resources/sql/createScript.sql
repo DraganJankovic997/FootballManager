@@ -42,6 +42,11 @@ alter table igrac add constraint PK_igrac primary key (id);
 alter table tim add constraint PK_tim primary key (id);
 alter table liga add constraint PK_liga primary key (id);
 
+alter table igrac drop constraint if exists FK_igrac_nacionalnost;
+alter table igrac drop constraint if exists FK_igrac_tim;
+alter table tim drop constraint if exists FK_tim_liga;
+
+
 alter table igrac add constraint FK_igrac_nacionalnost
 foreign key (nacionalnost) references nacionalnost(id) on delete cascade;
 alter table igrac add constraint FK_igrac_tim
