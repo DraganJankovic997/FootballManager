@@ -43,11 +43,11 @@ alter table tim add constraint PK_tim primary key (id);
 alter table liga add constraint PK_liga primary key (id);
 
 alter table igrac add constraint FK_igrac_nacionalnost
-foreign key (nacionalnost) references nacionalnost(id);
+foreign key (nacionalnost) references nacionalnost(id) on delete cascade;
 alter table igrac add constraint FK_igrac_tim
-foreign key (tim) references tim(id);
+foreign key (tim) references tim(id) on delete cascade;
 alter table tim add constraint FK_tim_liga
-foreign key (liga) references liga(id);
+foreign key (liga) references liga(id) on delete cascade;
 
 create index IDXFK_igrac_nacionalnost on igrac (nacionalnost);
 create index IDXFK_igrac_tim on igrac (tim);
