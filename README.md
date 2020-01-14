@@ -1,3 +1,5 @@
+Application for managing football clubs, players, leagues and nationalities. Created using Spring(JPA, Swagger), Angular7 (with Material design) and PostgreSQL relational database.
+
 # FrontedRVA
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
