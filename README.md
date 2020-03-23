@@ -10,3 +10,4 @@ User can add new players/nationalities/leagues and teams, edit and delete existi
 * How to create SoapUI tests for Rest API
 * How to use Material design
 * How to design frontend servies and manage backend requests and responses.
+* How to use PostgreSQL database
